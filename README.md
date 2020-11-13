@@ -1,1 +1,3 @@
-# leekspin-html5
+# leekspin without flash
+
+music currently doesn't autoplay
