@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<head>
+
+  <title>leekspin dot ca</title>
+  <meta property="og:title" content="carsuki's repo">
+  <meta property="og:description" content="my official repo for my things">
+  <meta property="og:url" content="https://leekspin.ca">
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/9ee8fa7e12.js" crossorigin="anonymous"></script>
+
+</head>
+
+<script>
+  var time
+  var output
+
+  function Init() {
+    time = 1;
+    StartTimer()
+  }
+
+  function convertOutput() {
+    var hours = 0
+    var mins = 0
+    var secs = time
+
+    while (secs >= 60) {
+      secs -= 60;
+      mins += 1;
+    }
+
+    if (secs < 10) {
+      secs = "0" + secs;
+    }
+
+    while (mins >= 60) {
+      mins -= 60;
+      hours += 1;
+    }
+
+    if (mins < 10) {
+      mins = "0" + mins;
+    }
+
+    output = hours + ":" + mins + ":" + secs;
+  }
+
+  function StartTimer() {
+    time += 1;
+    convertOutput();
+    document.getElementById("time").innerHTML = output;
+    self.setTimeout("StartTimer()", 1000);
+  }
+</script>
+
+<body onload="javascript:Init()">
+
+  <audio controls autoplay>
+
+    <source src="original.mp3" type="audio/mpeg">
+    Your browser doesn't support leekspin. Supported browsers are: Chrome 4.0+, Edge 9.0+, Firefox 3.5+, Safari 4.0+,
+    and Opera 10.5+. Derivatives of these browsers (ie Brave, Waterfox) should work, but I haven't used them.
+
+  </audio>
+
+  <div class="gif-container">
+
+  <img src="leekspin.gif" class="leek-girl">
+
+  </div>
+
+  <br>
+
+  <div class="time-container">
+
+    You've been spinning for <span id="time">00:00:00</span>.&nbsp;
+
+    <div class="socials-container">
+
+      <a href="https://github.com/carsuki/leekspin-html5" class="socials-link">
+        <i class="fab fa-github"></i>
+      </a>
+
+      <a href="https://carsuki.moe" class="socials-link" id="carsuki-button">
+        <img id="carsuki-button-content" src="blank.png" width="19" height="19">
+      </a>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="socials-break"></div>
+
+
+
+</body>

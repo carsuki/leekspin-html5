@@ -1,0 +1,78 @@
+/* basics */
+body {
+  background-color: black;
+}
+
+/* remove link underline */
+a {
+  text-decoration: none;
+}
+
+.leek-girl {
+  min-width: 85vw;
+  display: block;
+  height: auto;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* basics done */
+
+/* containers */
+
+.time-container {
+  text-align: center;
+  color: white;
+  font-size: 14pt;
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+}
+
+.socials-container {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.60);
+  font-size: 14pt;
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  display: inline-block;
+}
+
+/* space between timer and social buttons */
+.socials-break {
+  height: 12px;
+}
+
+/* social button properties (making sure they're not blue) */
+.socials-link:hover {
+  color: white;
+}
+
+.socials-link:before {
+  color: rgba(255, 255, 255, 0.60);
+}
+
+.socials-link:after {
+  color: rgba(255, 255, 255, 0.60);
+}
+
+.socials-link {
+  color: rgba(255, 255, 255, 0.60);
+}
+
+/* carsuki social button */
+#carsuki-button {
+  background: url("eyeball.png") no-repeat;
+  background-size: 18px;
+  opacity: 0.70;
+  background-position: center;
+  display: inline-block;
+  filter: grayscale(100%);
+}
+
+#carsuki-button:before {
+  opacity: 0.60;
+  filter: grayscale(100%);
+}
+
+#carsuki-button:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
